@@ -1,0 +1,299 @@
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+
+.nav-search{
+  height: 44px;
+  display: flex;
+}
+
+
+.signup-modal .form {
+  background: rgba(19, 35, 47, .9);
+  padding: 40px;
+  max-width: 600px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, .3);
+}
+.signup-modal .tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.signup-modal .tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.signup-modal .tab-group li a {
+  display: block;
+  text-decoration: none;
+  background: rgba(160, 179, 176, .25);
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.signup-modal .tab-group li a:hover {
+  background: #179b77;
+  color: #fff;
+}
+.signup-modal .tab-group .active a {
+  background: #1ab188;
+  color: #fff;
+}
+.signup-modal .tab-content > div:last-child {
+  display: none;
+}
+.signup-modal h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+.signup-modal label {
+  position: absolute;
+  transform: translateY(6px);
+  left: 13px;
+  color: rgba(255, 255, 255, .5);
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 20px;
+}
+.signup-modal label .req {
+  margin: 2px;
+  color: #1ab188;
+}
+.signup-modal label.active {
+  transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+.signup-modal label.active .req {
+  opacity: 0;
+}
+.signup-modal label.highlight {
+  color: #fff;
+}
+.signup-modal input, .signup-modal textarea {
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #fff;
+  border-radius: 0;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.signup-modal input:focus, .signup-modal textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+.signup-modal textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+.signup-modal .field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+.signup-modal .top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.signup-modal .top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.signup-modal .top-row > div:last-child {
+  margin: 0;
+}
+.signup-modal .button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #1ab188;
+  color: #fff;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+.signup-modal .button:hover, .button:focus {
+  background: #179b77;
+}
+.signup-modal .button-block {
+  display: block;
+  width: 100%;
+}
+.signup-modal .forgot {
+  margin-top: -20px;
+  text-align: right;
+}
+
+.signup-modal{
+  width: 40% !important;
+  max-height: 100% !important;
+  border-radius: 5px !important;
+  border: none !important;
+}
+.signup-modal:focus{
+  outline: none !important;
+}
+
+.company-carousel{
+  border-radius: 3px;
+  box-shadow: 0 10px 14px rgba(0,0,0,.2), 0 4px 15px rgba(0,0,0,.2);
+}
+.cmpny-carousel-wrap{
+  position: relative;
+}
+.cmpny-carousel-wrap .display-img{
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background: violet;
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.cmpny-card-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.cmpny-card-wrap .card{
+  max-width: 30%;
+}
+.company-carousel .carousel-item > img{
+  height: 100%;
+}
+#tabs-swipe{
+  background: transparent !important;
+}
+.srch-card .valign-wrapper{
+  margin-bottom: 0px !important;
+}
+.srch-card .card-panel{
+  padding: 10px !important;
+  border-radius: 60px 0px 0px 65px !important;
+}
+.srch-card img{
+  height: 100px;
+  width: 100px;
+}
+.profile-img{
+  height: 50px !important;
+  width: 50px;
+  margin-top: 6px;
+}
+.srch-label{
+  font-size: 20px !important;
+  margin-top: -15px !important;
+}
+.srch-input:focus ~ .srch-label{
+  margin-top: 0px !important;
+}
+.profile-drop{
+  position: relative;
+}
+.profile-drop img{
+  cursor: pointer;
+}
+.profile-drop ul{
+  display: none;
+  position: absolute;
+    top: 63px;
+    width: 200px;
+    right: 0px;
+    background: #fafafa !important;
+    box-shadow: 0px 8px 10px #8080807d;
+}
+.profile-drop ul li{
+  float: none;
+  text-align: right;
+}
+
+@media only screen and (max-width : 600px){
+  
+  .cmpny-carousel-wrap .display-img{
+    height: 140px !important;
+    width: 140px !important;
+    bottom: -70px !important;
+    margin-left: -70px !important;
+  }
+  .company-carousel{
+    height: 200px !important;
+  }
+  
+  .cmpny-card-wrap .card{
+    max-width: 100% !important;
+  }
+  .profile-img{
+    height: 40px !important;
+    width: 40px !important;
+    margin-top: 8px;
+  }
+  }
+
+

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="geoms">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Parallax Template - Materialize</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+    <header ng-controller="header" ng-switch on="navBar">
+        <nav class="white" role="navigation" ng-switch-when="homeNav">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="#" class="brand-logo">Geoms</a>
+                <div class="row right hide-on-med-and-down nav-search">
+                    <form class="col s12">
+                        <div class="row">
+
+                        </div>
+                    </form>
+                </div>
+
+                <ul id="nav-mobile" class="sidenav">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">search</i>
+                                <input id="icon_telephone" type="tel" class="validate">
+                                <label for="icon_telephone">Search Here !</label>
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+        <nav class="white" role="navigation" ng-switch-when="dashNav">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="#" class="brand-logo">Geoms2</a>
+                <div class="row right nav-search">
+                    <div class="hide-on-med-and-down">
+                        <form class="col s12">
+                            <div class="row">
+                                    <div class="input-field col s12">
+                                            <i class="material-icons prefix">search</i>
+                                            <input id="last_name" type="text" class="validate srch-input">
+                                            <label for="last_name" class="srch-label">Search Here</label>
+                                          </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="profile-drop"><img src="sampl_img.jpeg" alt="" ng-click="dropMe()" class="circle responsive-img profile-img z-depth-2">
+
+                    <!-- Dropdown Structure -->
+                    <ul id="drop-down">
+                      <li><a href="">Profile Name</a></li>
+                      <li class="divider" tabindex="-1"></li>
+                      <li><a href="#!/account">Account</a></li>
+                    </ul>
+                    </div>
+                </div>
+
+                <ul id="nav-mobile" class="sidenav">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">search</i>
+                                <input id="icon_telephone" type="tel" class="validate">
+                                <label for="icon_telephone">Search Here !</label>
+                            </div>
+                        </div>
+                    </form>
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section ng-view>
+
+    </section>
+
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Company Bio</h5>
+                    <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would
+                        help support and continue development on this project and is greatly appreciated.</p>
+
+
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Settings</h5>
+                    <ul>
+                        <li>
+                            <a class="white-text" href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="#!">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li>
+                            <a class="white-text" href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="#!">Link 2</a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="#!">Link 3</a>
+                        </li>
+                        <li>
+                            <a class="white-text" href="#!">Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by
+                <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+    <script src="js/jquerymin.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="angular_files/angular.min.js"> </script>
+    <script src="angular_files/angular-route.min.js"> </script>
+    <script src="js/app.js"> </script>
+</body>
+
+</html>
