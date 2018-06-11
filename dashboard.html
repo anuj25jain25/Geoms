@@ -1,30 +1,255 @@
 <div ng-controller="dashboard" class="dashboard">
+    <div id="addProduct" class="dash-modal valign-wrapper">
+        <div class="dash-modal-content">
+            <div>
+                <form>
+                    <h4 class="center-align">Add Product</h4>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="p-name" type="text" class="validate">
+                            <label for="p-name">Product Title</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="p-disc" class="materialize-textarea"></textarea>
+                            <label for="p-disc">Product Description</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Category</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                    <span>File</span>
+                                    <input type="file" multiple>
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 center-align">
+                            <button ng-click="togglePModal()" class="btn waves-effect waves-light" type="submit" name="action">Cancel
+                                <i class="material-icons right">cancel</i>
+                            </button>
+                        </div>
+                        <div class="col s6 center-align">
+                            <button ng-click="togglePModal()" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col m3">
             <div class="left-panel">
-                    <div class="collection">
-                            <a class="collection-header"><h4 class="center-align">Dashboard</h4></a>
-                            <a class="collection-item" ng-class="{'active':Profile=='true'}" ng-click="setProfile()">Profile</a>
-                            <a class="collection-item" ng-class="{'active':Products=='true'}" ng-click="setProducts()">Products</a>
-                            <a class="collection-item" ng-class="{'active':Payments=='true'}" ng-click="setPayments()">Payments</a>
-                            <a class="collection-item" ng-class="{'active':Orders=='true'}" ng-click="setOrders()">Orders</a>
-                          </div>
+                <div class="collection">
+                    <a class="collection-header">
+                        <h4 class="center-align">Dashboard</h4>
+                    </a>
+                    <a class="collection-item" ng-class="{'active':Profile=='true'}" ng-click="setProfile()">Profile</a>
+                    <a class="collection-item" ng-class="{'active':Products=='true'}" ng-click="setProducts()">Products</a>
+                    <a class="collection-item" ng-class="{'active':Payments=='true'}" ng-click="setPayments()">Payments</a>
+                    <a class="collection-item" ng-class="{'active':Orders=='true'}" ng-click="setOrders()">Orders</a>
+                </div>
             </div>
         </div>
         <div class="col m9">
+
             <div class="right-panel" ng-switch on="state">
-                    <div ng-switch-when="Profile">	<!--Profile-->
-                       <h1>Profile</h1>
+                <div ng-switch-when="Profile">
+                    <!--Profile-->
+                    <h1>Profile</h1>
+                </div>
+                <div ng-switch-when="Products">
+
+                    <!--Profile-->
+                    <div class="dash-cards">
+                        <div class="card">
+                            <div class="card-content">
+                                <center>
+                                    <span class="card-title activator grey-text text-darken-4">Add Product</span>
+                                    <button ng-click="togglePModal()" class="btn-floating btn-large waves-effect waves-light red">
+                                        <i class="material-icons">add</i>
+                                    </button>
+
+                                </center>
+
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="sampl_img.jpeg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Card Title
+                                    <i class="material-icons right">more_vert</i>
+                                </span>
+                                <p>
+                                    <a href="#">This is a link</a>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title
+                                    <i class="material-icons right">close</i>
+                                </span>
+                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="sampl_img.jpeg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Card Title
+                                    <i class="material-icons right">more_vert</i>
+                                </span>
+                                <p>
+                                    <a href="#">This is a link</a>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title
+                                    <i class="material-icons right">close</i>
+                                </span>
+                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="sampl_img.jpeg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Card Title
+                                    <i class="material-icons right">more_vert</i>
+                                </span>
+                                <p>
+                                    <a href="#">This is a link</a>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title
+                                    <i class="material-icons right">close</i>
+                                </span>
+                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="sampl_img.jpeg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Card Title
+                                    <i class="material-icons right">more_vert</i>
+                                </span>
+                                <p>
+                                    <a href="#">This is a link</a>
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Card Title
+                                    <i class="material-icons right">close</i>
+                                </span>
+                                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            </div>
+                        </div>
+
                     </div>
-                    <div ng-switch-when="Products">	<!--Profile-->
-                        <h1>Products</h1>
-                    </div>
-                    <div ng-switch-when="Payments">	<!--Profile-->
-                        <h1>Payments</h1>
-                    </div>
-                    <div ng-switch-when="Orders">	<!--Profile-->
-                        <h1>Orders</h1>
-                    </div>
+
+                </div>
+                <div ng-switch-when="Payments">
+                    <!--Profile-->
+                    <table class="striped responsive-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Item Name</th>
+                                <th>Item Price</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Alvin</td>
+                                <td>Eclair</td>
+                                <td>$0.87</td>
+                            </tr>
+                            <tr>
+                                <td>Alan</td>
+                                <td>Jellybean</td>
+                                <td>$3.76</td>
+                            </tr>
+                            <tr>
+                                <td>Jonathan</td>
+                                <td>Lollipop</td>
+                                <td>$7.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div ng-switch-when="Orders">
+                    <!--Profile-->
+                    <ul class="collection">
+                        <li class="collection-item avatar">
+                            <img src="sampl_img.jpeg" alt="" class="circle">
+                            <span class="title">Title</span>
+                            <p>First Line
+                                <br> Second Line
+                            </p>
+                            <a href="#!" class="secondary-content">
+                                <i class="material-icons">grade</i>
+                            </a>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle">folder</i>
+                            <span class="title">Title</span>
+                            <p>First Line
+                                <br> Second Line
+                            </p>
+                            <a href="#!" class="secondary-content">
+                                <i class="material-icons">grade</i>
+                            </a>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle green">insert_chart</i>
+                            <span class="title">Title</span>
+                            <p>First Line
+                                <br> Second Line
+                            </p>
+                            <a href="#!" class="secondary-content">
+                                <i class="material-icons">grade</i>
+                            </a>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle red">play_arrow</i>
+                            <span class="title">Title</span>
+                            <p>First Line
+                                <br> Second Line
+                            </p>
+                            <a href="#!" class="secondary-content">
+                                <i class="material-icons">grade</i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
             </div>
         </div>
     </div>

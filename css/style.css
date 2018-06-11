@@ -294,7 +294,38 @@ footer.page-footer {
 .right-panel{
   padding: 20px;
 }
-
+.dash-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.dash-cards .card{
+  width: 200px;
+  margin: 5px;
+}
+.dash-modal{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #212121d1;
+  z-index: 999;
+}
+.dash-modal > div{
+  background: white;
+  margin: auto;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 10px 14px rgba(0,0,0,.2), 0 4px 15px rgba(0,0,0,.2);
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 500px;
+  width: 400px;
+}
+.p-overlay{
+  overflow: hidden;
+}
 
 @media only screen and (max-width : 600px){
   

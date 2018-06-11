@@ -99,6 +99,16 @@ app.controller('search',function($rootScope,$scope){
 });
 
 app.controller('dashboard',function($rootScope,$scope){
+    $("#addProduct").hide();
+    $scope.togglePModal=function(){
+        $("body").toggleClass("p-overlay");
+        $("#addProduct").toggle();
+    }
+
+    $(document).ready(function(){
+        $('select').formSelect();
+      });
+
     console.log("dashboard");
     $scope.state="Profile";
     $scope.Profile="true";
