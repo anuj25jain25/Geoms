@@ -97,6 +97,41 @@ app.controller('search',function($rootScope,$scope){
     $rootScope.navBar="dashNav";
 
 });
+
+app.controller('dashboard',function($rootScope,$scope){
+    console.log("dashboard");
+    $scope.state="Profile";
+    $scope.Profile="true";
+    
+	$scope.setProfile=function(){
+		$scope.state="Profile"
+		$scope.Profile="true";
+		$scope.Products="false";
+		$scope.Payments="false";
+		$scope.Orders="false";
+	}
+	$scope.setProducts=function(){
+		$scope.state="Products"
+		$scope.Profile="false";
+		$scope.Products="true";
+		$scope.Payments="false";
+		$scope.Orders="false";
+	}
+	$scope.setPayments=function(){
+		$scope.state="Payments"
+		$scope.Profile="false";
+		$scope.Products="false";
+		$scope.Payments="true";
+		$scope.Orders="false";
+	}
+	$scope.setOrders=function(){
+        $scope.state="Orders"
+		$scope.Profile="false";
+		$scope.Products="false";
+		$scope.Payments="false";
+		$scope.Orders="true";
+	}
+});
 //routing
 app.config(function($routeProvider){
 	$routeProvider
@@ -111,5 +146,8 @@ app.config(function($routeProvider){
     })
     .when("/search",{
         templateUrl : "search.html"
+    })
+    .when("/dashboard",{
+        templateUrl : "dashboard.html"
     })
 });

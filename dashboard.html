@@ -1,0 +1,32 @@
+<div ng-controller="dashboard" class="dashboard">
+    <div class="row">
+        <div class="col m3">
+            <div class="left-panel">
+                    <div class="collection">
+                            <a class="collection-header"><h4 class="center-align">Dashboard</h4></a>
+                            <a class="collection-item" ng-class="{'active':Profile=='true'}" ng-click="setProfile()">Profile</a>
+                            <a class="collection-item" ng-class="{'active':Products=='true'}" ng-click="setProducts()">Products</a>
+                            <a class="collection-item" ng-class="{'active':Payments=='true'}" ng-click="setPayments()">Payments</a>
+                            <a class="collection-item" ng-class="{'active':Orders=='true'}" ng-click="setOrders()">Orders</a>
+                          </div>
+            </div>
+        </div>
+        <div class="col m9">
+            <div class="right-panel" ng-switch on="state">
+                    <div ng-switch-when="Profile">	<!--Profile-->
+                       <h1>Profile</h1>
+                    </div>
+                    <div ng-switch-when="Products">	<!--Profile-->
+                        <h1>Products</h1>
+                    </div>
+                    <div ng-switch-when="Payments">	<!--Profile-->
+                        <h1>Payments</h1>
+                    </div>
+                    <div ng-switch-when="Orders">	<!--Profile-->
+                        <h1>Orders</h1>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</div>
